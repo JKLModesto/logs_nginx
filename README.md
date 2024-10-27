@@ -50,15 +50,15 @@ Para monitorar o status do Nginx, foi criado um script que registra o status em 
 
 ### Funcionamento do Script
 
-    O script armazena variáveis para o monitoramento do status do serviço Nginx. Ele define o diretório onde está localizado e cria variáveis para os caminhos dos arquivos online.log e offline.log. Uma terceira variável, STATUS_SERVER, é configurada para capturar o status do Nginx com o comando systemctl is-active nginx, que retorna active se o serviço estiver funcionando ou inactive se estiver parado.
+   O script armazena variáveis para o monitoramento do status do serviço Nginx. Ele define o diretório onde está localizado e cria variáveis para os caminhos dos arquivos online.log e offline.log. Uma terceira variável, STATUS_SERVER, é configurada para capturar o status do Nginx com o comando systemctl is-active nginx, que retorna active se o serviço estiver funcionando ou inactive se estiver parado.
 
     ```bash
     STATUS_SERVER=$(systemctl is-active nginx)
     ```
 
-    Este comando retorna `active` ou `inactive`.
+   Este comando retorna `active` ou `inactive`.
 
-    Em seguida, o script verifica o valor de STATUS_SERVER usando uma estrutura IF. Se o Nginx estiver ativo, o script registra essa informação no online.log; caso contrário, ele registra no offline.log.
+   Em seguida, o script verifica o valor de STATUS_SERVER usando uma estrutura IF. Se o Nginx estiver ativo, o script registra essa informação no online.log; caso contrário, ele registra no offline.log.
 
 ### Automação com Crontab
 
