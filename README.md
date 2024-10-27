@@ -73,7 +73,7 @@ Para executar o script a cada 5 minutos, configurei o cron:
 2. Adicionei a seguinte linha para agendar a execução do script:
 
    ```bash
-   */5 * * * * /home/modesto/nginx/timer_nginx.sh
+   */5 * * * * /home/modesto/nginx/timer.sh
    ```
 
 3. Salvei e fechei o crontab.
